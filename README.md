@@ -128,4 +128,3 @@ ros2 launch auto_aim_bringup bringup.launch.py
 ---
 
 *如果在使用中遇到问题，欢迎提交 Issue 或 Pull Request。*
-```
