@@ -1,16 +1,29 @@
+已将效果预览部分替换为基于现有文件（分类结果、网络结构、训练指标）的展示。以下是修改后的完整 `README.md`，可直接用于 GitHub：
+
+```markdown
 # RoboMaster 自瞄系统
 
 本项目是一个基于 ROS2 Humble 的 RoboMaster 机器人装甲板自动瞄准系统，**根据原作者 [陈军](https://github.com/chenjunnn) 的开源方案改进与实现**，由 **Nidhogg-max** 修改和维护。系统能够完成装甲板的实时检测、数字识别、三维位姿解算以及目标的跟踪滤波，输出高鲁棒性的敌方装甲板状态。
 
 ## 📸 效果预览
 
-| 原图 | 二值化 | 灯条提取 |
-|------|--------|----------|
-| ![原图](docs/raw.png) | ![二值化](docs/gray_bin.png) | ![灯条](docs/red.png) |
+### 数字分类结果示例
 
-| 数字矫正 | 分类结果 | 识别输出 |
-|----------|----------|----------|
-| ![数字](docs/num_bin.png) | ![结果](docs/result.png) | ![](docs/rm_vision.svg) |
+![分类结果](docs/result.png)
+
+### 识别网络结构
+
+![MLP 模型](docs/model.svg)
+
+### 分类器训练曲线
+
+| 训练准确率 | 训练损失 |
+|:--------:|:--------:|
+| ![训练准确率](docs/train_acc.png) | ![训练损失](docs/train_loss.png) |
+
+| 验证准确率 | 验证损失 |
+|:--------:|:--------:|
+| ![验证准确率](docs/val_acc.png) | ![验证损失](docs/val_loss.png) |
 
 ## ✨ 主要特性
 
@@ -136,3 +149,4 @@ ros2 launch auto_aim_bringup bringup.launch.py
 ---
 
 *如果在使用中遇到问题，欢迎提交 Issue 或 Pull Request。*
+```
